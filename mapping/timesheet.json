@@ -1,0 +1,34 @@
+{
+  "properties": {
+    "story_id": {
+      "type": "long"
+    },
+    "story_name": {
+      "type": "text"
+    },
+    "tasks": {
+      "type": "nested",
+      "properties": {
+        "task_id": {
+          "type": "long"
+        },
+        "task_name": {
+          "type": "keyword"
+        },
+        "hours": {
+          "properties": {
+            "task_id": {
+              "type": "long"
+            },
+            "user_id": {
+              "type": "long"
+            },
+            "hours": {
+              "type": "double"
+            }
+          }
+        }
+      }
+    }
+  }
+}
